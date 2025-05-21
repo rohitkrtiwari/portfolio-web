@@ -148,7 +148,7 @@ export default function Page() {
               
               <div className="mt-6">
                 <Link 
-                  href="/Projects" 
+                  href="/projects" 
                   className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline"
                 >
                   View all projects
