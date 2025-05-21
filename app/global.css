@@ -148,3 +148,63 @@ table {
 .title {
   text-wrap: balance;
 }
+
+/* Add these to your existing global.css */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 3rem 1rem;
+}
+
+.dark .hero {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+/* Featured Posts */
+.featured-posts {
+  margin-top: 4rem;
+}
+
+/* Prose Enhancements */
+.prose {
+  max-width: 100%;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button Styles */
+.hover\:bg-blue-700:hover {
+  background-color: #1d4ed8;
+}
+
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

@@ -1,38 +1,174 @@
 import { BlogPosts } from 'app/components/posts'
+import Link from 'next/link'
+import { ArrowRightIcon, CodeBracketIcon, AcademicCapIcon } from '@heroicons/react/20/solid'
+import { ArrowUpRightIcon, CodeBracketSquareIcon } from '@heroicons/react/24/outline' // Use this as GitHub icon
 
+
+// import { AcademicCapIcon, CodeBracketIcon, ArrowRightIcon } from '@heroicons/react/20/solid'
 export default function Page() {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Hello, I'm Rohit Tiwari 👋
-      </h1>
-      <p className="mb-4">
-        {`I am an Embedded Systems Developer with a passion for creating efficient, real-time solutions. My journey into the world of programming began during my early academic years, where I found myself fascinated by the inner workings of software and hardware integration. I started with C and C++, building a strong foundation in low-level programming and memory management. As I delved deeper, my interest expanded into Python and Assembly, allowing me to work on microcontrollers, embedded devices, and real-time tracking systems.
-      `}
-      </p>
-      <h4 className="mb-2 font-semibold tracking-tighter">
-      Educational and Technical Growth
-      </h4>
-      <p className="mb-4">
-        {`  
-        I pursued my diploma in engineering, where I built my first E-commerce website (Electrozon) using PHP and MySQL, a project that took about three months to develop and deploy. This hands-on experience solidified my understanding of backend development and database management.
+    <div className="max-w-3xl mx-auto px-4">
+      {/* Hero Section */}
+      <section className="hero text-center py-12 mb-8">
+        <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent">
+          Hello, I'm Rohit Tiwari!
+        </h1>
+        <h2 className="text-xl text-neutral-600 dark:text-neutral-400">
+          Embedded Systems Developer | Real-time Solutions Expert
+        </h2>
+      </section>
 
-        During my undergraduate studies, I became more involved in real-time tracking systems, leading me to develop a vehicle tracking system integrating the SIM900A module and GPS technology. Around the same time, I worked on an ISRO satellite tracking project, which deepened my expertise in networking and real-time data analysis.
-        `}
-        </p>
-        <h4 className="mb-2 font-semibold tracking-tighter">
-        Advanced Learning and Projects
-        </h4>
-        <p className="mb-4">
-        {`
-        As I progressed, I became interested in cybersecurity and cryptography, leading me to develop an LSB steganography script in C to hide data within images. This project refined my skills in bitwise operations and low-level image manipulation. Later, I took on the challenge of implementing Data Encryption Standard (DES) from scratch in C, where I successfully completed the initial and reverse permutations, key scheduling, and Feistel function implementation.
+      {/* About Section */}
+      <section className="about mb-16">
+        <div className="prose dark:prose-invert max-w-none">
+          <p className="mb-6">
+            {`I am an Embedded Systems Developer currently pursuing my Master's at IIT Jammu, with a passion for creating efficient, real-time solutions and exploring machine learning applications.`}
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Education Column - Reverse Chronological */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <AcademicCapIcon className="w-5 h-5 mr-2" />
+                Education
+              </h3>
+              
+              <ul className="space-y-4">
+                <li>
+                  <div className="flex justify-between">
+                    <strong>M.Tech Computer Science</strong>
+                    <span className="text-sm text-neutral-500">2024-Present</span>
+                  </div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    • Indian Institute of Technology, Jammu (CGPA: 8.34)
+                    <br/>• Specializing in Data Science and Machine Learning
+                    <br/>• Teaching Assistant for DBMS Lab
+                  </div>
+                </li>
+                <li>
+                  <div className="flex justify-between">
+                    <strong>B.Tech Computer Science</strong>
+                    <span className="text-sm text-neutral-500">2021-2024</span>
+                  </div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    • Institute of Engineering & Technology, Lucknow (CGPA: 7.81)
+                    <br/>• Relevant Coursework: DSA, OOP, Computer Networks
+                  </div>
+                </li>
+                <li>
+                  <div className="flex justify-between">
+                    <strong>Diploma in ECE</strong>
+                    <span className="text-sm text-neutral-500">2018-2021</span>
+                  </div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    • Pusa Institute of Technology, Delhi (89%)
+                    <br/>• Foundation in hardware/software integration
+                  </div>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Link 
+                  href="/resume.pdf" 
+                  className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  Resume / CV
+                  <ArrowRightIcon className="w-3 h-3 ml-1" />
+                </Link>
+              </div>
+            </div>
 
-        Beyond development, I have a strong interest in systems programming and networking, with hands-on experience in BASH scripting, TCP/IP protocols, Bluetooth, Zigbee, and UI/UX design. My work with development tools for embedded systems such as analyzers, oscilloscopes, and JTAG has further strengthened my expertise in hardware debugging and simulations.
-.`}
-      </p>
-      <div className="my-8">
-        <BlogPosts />
-      </div>
-    </section>
+            {/* Projects Column - Prioritized */}
+            <div>
+              <h3 className="text-xl font-semibold mb-4 flex items-center">
+                <CodeBracketIcon className="w-5 h-5 mr-2" />
+                Featured Projects
+              </h3>
+              
+              <ul className="space-y-4">
+                <li>
+                  <div className="flex justify-between items-start">
+                    <strong>Low-Resource Hindi Language Modeling</strong>
+                    <a 
+                      href="https://github.com/rohitkrtiwari/Low-Resource-NLP-Indian-Language-LLMs" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-neutral-500 hover:text-blue-500 transition"
+                      aria-label="GitHub repository"
+                    >
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </a>
+                  </div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    • Developed custom tokenizers for Hindi NLP tasks
+                    <br/>• Optimized models for limited computational resources
+                    <br/>• Techniques: Subword tokenization, Transformer architectures
+                  </div>
+                </li>
+                
+                <li>
+                  <div className="flex justify-between items-start">
+                    <strong>Real-Time Vehicle Tracking System</strong>
+                    <a 
+                      href="https://github.com/rohitkrtiwari/real-time-vehicle-tracking-system" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-neutral-500 hover:text-blue-500 transition"
+                      aria-label="GitHub repository"
+                    >
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </a>
+                  </div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    • Hardware-software integration (GPS/GSM + ESP32)
+                    <br/>• Web app with Mapbox visualization
+                    <br/>• ThingSpeak server for data analytics
+                  </div>
+                </li>
+                
+                <li>
+                  <div className="flex justify-between items-start">
+                    <strong>ISSAT - ISRO Satellite Tracker</strong>
+                    <a 
+                      href="https://github.com/rohitkrtiwari/ISSAT-ISRO-Satellite-Tracker" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-neutral-500 hover:text-blue-500 transition"
+                      aria-label="GitHub repository"
+                    >
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </a>
+                  </div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-400">
+                    • 3D/2D visualization of satellite orbits
+                    <br/>• Integrated ISRO and N2YO APIs
+                    <br/>• Flask backend with MySQL database
+                  </div>
+                </li>
+              </ul>
+              
+              <div className="mt-6">
+                <Link 
+                  href="/Projects" 
+                  className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View all projects
+                  <ArrowRightIcon className="w-3 h-3 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Featured Posts Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold mb-8">
+          Latest Articles
+        </h2>
+
+        <BlogPosts limit={3} />
+      </section>
+    </div>
   )
 }
