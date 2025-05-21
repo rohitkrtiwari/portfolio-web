@@ -68,7 +68,7 @@ export default function Page() {
               </ul>
               <div className="mt-6">
                 <Link 
-                  href="/resume.pdf" 
+                  href="https://drive.google.com/file/d/1ik8ypcKdwgFqjrOZMNL6YA2KbkWWA3_P/view?usp=sharing" 
                   className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline"
                 >
                   Resume / CV
