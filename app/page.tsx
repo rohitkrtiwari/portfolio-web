@@ -92,7 +92,7 @@ export default function Page() {
                       href="https://github.com/rohitkrtiwari/Low-Resource-NLP-Indian-Language-LLMs" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-2 text-neutral-500 hover:text-blue-500 transition"
+                      className="ml-2 text-neutral-500 hover:text-blue-500 transition hover:underline"
                       aria-label="GitHub repository"
                     >
                       <ArrowUpRightIcon className="w-4 h-4" />
@@ -112,7 +112,7 @@ export default function Page() {
                       href="https://github.com/rohitkrtiwari/real-time-vehicle-tracking-system" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-2 text-neutral-500 hover:text-blue-500 transition"
+                      className="ml-2 text-neutral-500 hover:text-blue-500 transition hover:underline"
                       aria-label="GitHub repository"
                     >
                       <ArrowUpRightIcon className="w-4 h-4" />
@@ -132,7 +132,7 @@ export default function Page() {
                       href="https://github.com/rohitkrtiwari/ISSAT-ISRO-Satellite-Tracker" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-2 text-neutral-500 hover:text-blue-500 transition"
+                      className="ml-2 text-neutral-500 hover:text-blue-500 transition hover:underline"
                       aria-label="GitHub repository"
                     >
                       <ArrowUpRightIcon className="w-4 h-4" />
