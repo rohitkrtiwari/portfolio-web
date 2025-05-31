@@ -9,16 +9,25 @@ export default function Page() {
   return (
     <div className="max-w-3xl mx-auto px-4">
       {/* Hero Section */}
-      <div className="pt-16 pb-4 bg-dark  text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <span className="text-neutral-900 dark:text-white">Hello, I'm </span>
-          <span className=" text-blue-600 dark:text-blue-400  border-blue-500">
-            Rohit Tiwari
-          </span>
-        </h1>
-        <p className="text-xl font-bold text-it text-neutral-600 dark:text-neutral-300 ">
-          Writing C feels like writing love letters to the hardware !
-        </p>
+      <div className="pt-16 pb-12 text-center">
+        <div className="flex flex-col items-center">
+          {/* Passport photo with modern framing */}
+          <div className="w-32 h-32 md:w-40 md:h-40 mb-6 rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-lg ring-2 ring-blue-500/30">
+            <img
+              src="/images/photo.png"  // Replace with your image path
+              alt="Rohit Tiwari"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold mb-2">
+            <span className="text-neutral-900 dark:text-white">Hello, I'm </span>
+            <span className="text-blue-600 dark:text-blue-400">Rohit Tiwari</span>
+          </h1>
+          <p className="text-xl italic text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+            "Writing C feels like writing love letters to hardware"
+          </p>
+        </div>
       </div>
 
       {/* About Section */}
