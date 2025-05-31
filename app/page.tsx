@@ -9,14 +9,15 @@ export default function Page() {
   return (
     <div className="max-w-3xl mx-auto px-4">
       {/* Hero Section */}
-      <section className="hero text-center py-12 mb-8">
-        <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent">
-          Hello, I'm Rohit Tiwari!
+      <div className="text-center pt-16 pb-4 bg-dark">
+        <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-gradient bg-clip-text text-transparent 
+                bg-[length:300%_300%] bg-gradient-to-r from-blue-600 via-teal-500 to-purple-600">
+          Hello, I'm Rohit Tiwari
         </h1>
-        <h2 className="text-xl text-neutral-600 dark:text-neutral-400">
+        <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
           Embedded Systems Developer | Real-time Solutions Expert
-        </h2>
-      </section>
+        </p>
+      </div>
 
       {/* About Section */}
       <section className="about mb-16">
