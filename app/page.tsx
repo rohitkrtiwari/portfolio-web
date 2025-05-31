@@ -12,12 +12,12 @@ export default function Page() {
       <div className="pt-16 pb-4 bg-dark  text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           <span className="text-neutral-900 dark:text-white">Hello, I'm </span>
-          <span className="typewriter text-blue-600 dark:text-blue-400 border-r-2 border-blue-500 animate-cursor">
+          <span className=" text-blue-600 dark:text-blue-400  border-blue-500">
             Rohit Tiwari
           </span>
         </h1>
-        <p className="text-xl text-neutral-600 dark:text-neutral-300">
-          Building the future one microcontroller at a time
+        <p className="text-xl font-bold text-it text-neutral-600 dark:text-neutral-300 ">
+          Writing C feels like writing love letters to the hardware !
         </p>
       </div>
 
