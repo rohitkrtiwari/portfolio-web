@@ -5,88 +5,139 @@ summary: 'From browser windows to blinking LEDs and satellite-linked vehicles—
 ---
 
 
-# **🔌 How I Fell in Love with Embedded Systems**
+## 📑 Table of Contents
 
-It was 2016. I was in 9th standard, sitting in front of a 10-year-old HCL laptop with just 2GB RAM and a Pentium processor. But none of that mattered. What mattered was that I had just written my first web page. It was nothing more than some colored divs, a few links, and maybe a table or two. But seeing that page render inside a browser felt magical. It was my first experience of creating something with code.
+- [🌱 Where It All Began — 2016](#where-it-all-began)
+- [🧠 Real Programming Begins — 2019](#real-programming-begins--2019)
+- [💡 First Hardware Project — Sequential LED Blinker](#first-hardware-project--sequential-led-blinker)
+- [🚘 My First Robot — Self-Driving Car](#my-first-robot--self-driving-car)
+- [📡 Real-Time Vehicle Tracking — Final Year Project](#real-time-vehicle-tracking--final-year-project-20202021)
+- [🌐 From Projects to Profession — Silicon Labs Internship](#from-projects-to-profession--silicon-labs-internship)
+- [❤️ Why Embedded Still Feels Like Magic](#why-embedded-still-feels-like-magic)
 
-This was my first window into programming. While others around me were focused on school subjects, I found joy in \<style> tags and HTML tables. I didn’t know what a microcontroller was. I didn’t know what embedded systems even meant. But I had started—and that was enough.
+
+<h1 id="where-it-all-began">🌱 Where It All Began — 2016</h1>
+
+<blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6">
+  "The most powerful programming language is not C, Python, or Java—it’s curiosity.”
+</blockquote>
+
+My love for embedded systems didn’t start with microcontrollers or blinking LEDs. It started with a 10-year-old HCL laptop and a desire to understand how computers respond to human logic. In 2016, when I was in 9th standard, I began exploring HTML and CSS. My machine was far from ideal—just 2GB of RAM and a sluggish Pentium processor—but none of that mattered. What mattered was the excitement I felt every time I saved a file and refreshed the browser, watching a heading change color or a button move position. It felt like magic—magic I had created with my own hands. I didn’t know it then, but that feeling would become the foundation of a much deeper journey.
 
 
-<div className="my-4 rounded-md overflow-hidden shadow">
-  <img src="/images/love-with-embedded-systems/1.png" alt="My First Web Page" />
+As I moved into 10th grade and then my diploma in Electronics engineering (2018–2021), I continued exploring. I transitioned from front-end design to full-stack development, teaching myself PHP and MySQL. In 2019, I started working on my first real project: an e-commerce website called [Electrozon][1]. It took me nearly five months to build, and every part of it—from user login systems to shopping cart logic—was handcrafted and carefully debugged. I didn’t do it for marks or applause. I did it because building things felt empowering. While most of my classmates were focused on theory, I was obsessed with practice. I didn’t realize it at the time, but I was already developing the mindset that embedded systems would later demand: attention to detail, comfort with debugging, and a deep love for making machines do useful things.
+
+<div className="my-4 rounded-md overflow-hidden shadow w-[90%] mx-auto">
+  <img src="/images/love-with-embedded-systems/1.png " alt="My First Web Page" />
   <p className="text-sm text-center text-gray-500 italic mt-2">My First Web Page</p>
 </div>
 
 
-## **🧠 Real Programming Begins**
 
-By 2019, during my diploma, I started exploring C. And that’s when the real fun (and frustration) began. I remember trying to write a calculator program in Turbo C, running into endless errors, and wondering why nothing ever worked the way I thought it should. But I loved it. Even the bugs.
+<h2 id="real-programming-begins--2019">🧠 Real Programming Begins -2019</h2>
 
-There was something pure about writing C—minimal abstraction, full control, and brutal honesty. Either it worked, or it didn’t. And slowly, I began to understand how computers actually think. Programming was no longer just about "what you see on screen"—it was about logic, memory, and precision.
 
-<div className="my-4 rounded-md overflow-hidden shadow">
+2019 was the year things got serious. Up until that point, I had been mostly working with front-end technologies and scripting languages. But then I met C—the language that would fundamentally change the way I think about programming. Unlike HTML or PHP, C didn’t hold your hand. It didn’t offer friendly error messages or abstract away complexity. It was raw, efficient, and brutally honest. My first experience with C came through Turbo C, and I still remember staring at that blue screen, trying to write a basic calculator program. It crashed repeatedly. Variables went uninitialized, loops ran forever, and syntax errors flooded the console. But something about that experience gripped me. This wasn’t just about building interfaces anymore. It was about understanding the inner workings of a system—memory, logic, control flow, data movement. I was hooked.
+
+
+What C gave me was discipline. It forced me to think step-by-step. It made me appreciate things like pointers, memory allocation, and the power (and danger) of direct hardware access. I learned how to break big problems into smaller ones, how to use logic to debug issues, and most importantly, how to stay calm when nothing worked. It was also around this time I realized I was walking a different path than most of my classmates. While others were memorizing theory and preparing for semester exams, I was spending nights in the lab trying to fix a missing semicolon or understand why my loop wouldn’t break. It wasn’t easy—but it was thrilling. This was real programming, and I knew I wanted more of it.
+
+
+<div className="my-4 rounded-md overflow-hidden shadow w-[90%] mx-auto">
   <img src="/images/love-with-embedded-systems/2.jpg" alt="Introduced to C Programming" />
   <p className="text-sm text-center text-gray-500 italic mt-2">Introduced to C Programming</p>
 </div>
 
-## **💡 First Hardware Project — Sequential LED Blinker (Late 2019)**
+<h2 id="first-hardware-project--sequential-led-blinker">💡 First Hardware Project — Sequential LED Blinker (Late 2019)</h2>
 
-My journey with hardware began soon after. I built a sequential LED blinking circuit using a 555 timer and 4017 decade counter. It was basic, yes—but when I saw those LEDs blink in a perfect sequence, I felt something shift. For the first time, my code and logic weren't just pixels—they were physical.
 
-This was my first true embedded moment: the moment where I stopped being a "software-only" person and started becoming someone who cared about circuits, signals, and hardware behavior. It wasn’t clean. It wasn’t easy. But it was real.
+My first experience with actual hardware came in late 2019, and it was both simple and life-changing. After spending so much time writing code that only lived on screens, I wanted to build something that physically responded—something that could be touched, seen, and felt. That’s when I stumbled upon a project idea that seemed basic on the surface but turned out to be incredibly rewarding: a **sequential LED blinker**. The goal was to blink LEDs one after another in a loop, like a running light. I used a 555 timer and a 4017 decade counter, carefully following circuit diagrams and double-checking every connection. When I finally powered it on and saw those LEDs blink in perfect sequence, it was hard to believe something so mechanical could feel so personal.
 
-<div className="my-4 rounded-md overflow-hidden shadow">
+
+The project introduced me to the world of electronics—resistors, capacitors, voltage drops, and IC pinouts. It was my first time using a breadboard, and I vividly remember how one loose jumper wire could stop everything from working. I learned how to troubleshoot hardware: checking continuity, using a multimeter, and being patient with physical components in a way that was very different from software. There was no “undo” button here—just deliberate problem-solving and careful handling. That project taught me that hardware has its own language and logic, and to work with it, you have to slow down, observe, and respect the details. It was the first time I saw software and hardware truly come together—and it opened a door I haven’t wanted to close since.
+
+
+<div className="my-4 rounded-md overflow-hidden shadow w-[90%] mx-auto">
   <img src="/images/love-with-embedded-systems/3.jpg" alt="Sequential LED Blinker" />
   <p className="text-sm text-center text-gray-500 italic mt-2">Sequential LED Blinker</p>
 </div>
 
 
 
-## **🚘 My First Robot — Self-Driving Car with Collision Avoidance (2020)**
+<h2 id="my-first-robot--self-driving-car">🚘 My First Robot — Self-Driving Car with Collision Avoidance (2020)</h2>
 
-In 2020, I took things up a notch and built a simple autonomous robot car with ultrasonic collision detection. I used Arduino, ultrasonic sensors, and motor drivers—all soldered and assembled on my hostel room desk.
-
-This wasn’t just a coding challenge—it was an exercise in system design: power, movement, signal processing, and real-time reaction. Every crash (literal and metaphorical) taught me something new. I loved how embedded systems demanded both coding logic and practical engineering. It was no longer just about writing good code—it was about making everything work together.
+After the thrill of my first LED-based hardware project, I wanted more—I wanted motion, logic, and autonomy. In 2020, I took the leap and built my first **robotic car** with basic self-driving capabilities. It was a collision avoidance system powered by an Arduino board, ultrasonic sensors, motor drivers, and a rechargeable battery pack. The idea was to have the robot detect obstacles and reroute itself, mimicking a simplified version of how autonomous vehicles navigate the world. Compared to previous projects, this one required a different level of complexity—not just in wiring and electronics, but in thinking.
 
 
-<div className="my-4 rounded-md overflow-hidden shadow">
+I had to map out the entire system: how the ultrasonic sensor would scan its environment, how the logic would determine the direction of movement, and how the motors would respond in real time. I wrote the logic in C, keeping memory constraints and timing delays in mind. A slight miscalculation in distance could cause the car to crash. A bad connection on the motor driver could fry the circuit. Debugging meant both staring at serial monitor outputs and watching the robot physically bump into walls. Every failure felt frustrating at first—but strangely addictive. Each iteration taught me something, not just about the hardware but about my own process of thinking, planning, and adapting.
+
+More importantly, it was the first time I saw my code come alive in motion. The robot wasn’t just blinking or beeping—it was navigating, reacting, and “deciding.” That sense of life, even in a basic system, was electrifying. It deepened my love for embedded systems and reinforced one powerful idea: that good code doesn’t just run—it moves.
+
+
+
+<div className="my-4 rounded-md overflow-hidden shadow w-[90%] mx-auto">
   <img src="/images/love-with-embedded-systems/4.jpg" alt="Ultrasonic Collision Avoidance Car" />
   <p className="text-sm text-center text-gray-500 italic mt-2">Ultrasonic Collision Avoidance Car</p>
 </div>
 
 
 
-# **📡 Final Year Project — Real-Time Vehicle Tracking (2021)**
 
-By the time I reached my final year of diploma in 2021, I was ready for something bigger. I built a real-time vehicle tracking system using the SIM900A GSM module, a GPS receiver, and a microcontroller. The idea: track a vehicle’s location in real-time and send it via SMS or GPRS to a remote server.
+<h2 id="real-time-vehicle-tracking--final-year-project-20202021">📡 Real-Time Vehicle Tracking — Final Year Project (2020–2021)</h2>
 
-This project was long, intense, and incredibly rewarding. I learned how to interface with AT commands, how to parse NMEA GPS data, and how to debug serial communication issues with limited tools. I understood the critical importance of power supply stability, baud rate synchronization, and antenna positioning. Every component mattered. Every line of C code could crash the system—or make it work.
+<blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6">
+  “If you want to learn to swim, throw yourself into deep water.”
+  — Paulo Coelho
+</blockquote>
 
-I have dozens of photos from that project—snapshots of breadboards, messy jumper wires, test logs, and successful data transmissions. Those photos are memories. They remind me that this is where my love for embedded systems became something deeper: commitment.
+
+By the final year of my diploma in 2020, I knew I wanted to challenge myself with something ambitious—something that would integrate hardware, communication protocols, and real-world applications. That’s when the idea of building a [real-time vehicle tracking][2] system came to mind. The concept was simple: use a GPS module to get the live location of a vehicle and transmit it remotely via a GSM module to a server or mobile number. But the execution was anything but simple.
+
+The project spanned several months and became my most immersive technical experience up to that point. I used a **SIM900A GSM module**, a **GPS receiver**, and an **ESP32 microcontroller**. Getting the GPS module to lock onto satellites and parsing raw NMEA strings into readable latitude and longitude data was an early challenge. Then came interfacing the GSM module—sending AT commands over UART, managing baud rates, and handling the frustratingly vague response errors. The system would sometimes hang, reset, or fail silently, forcing me to debug both code and hardware wiring endlessly.
+
+But it was also during this project that I truly began to understand how embedded systems operate in the real world—where power fluctuations, environmental interference, and timing delays aren’t just edge cases but everyday problems. I learned how to structure code for real-time decision-making, how to debug serial communication, and how to test modules in open environments. I captured dozens of photographs during the process—snapshots of breadboards, serial logs, GSM status lights, and those euphoric moments when location data finally showed up correctly.
+
+This wasn’t just a project—it was proof to myself that I could build systems that live outside IDEs and operate in the messy, unpredictable real world. It sealed my bond with embedded systems for good.
 
 
-<div className="my-4 rounded-md overflow-hidden shadow">
-  <img src="/images/love-with-embedded-systems/5.jpg" alt="Vehicle Tracking System" />
+
+<div className="my-4 rounded-md overflow-hidden shadow w-[90%] mx-auto">
+  <img src="/images/love-with-embedded-systems/5.jpg"  alt="Vehicle Tracking System" />
   <p className="text-sm text-center text-gray-500 italic mt-2">Vehicle Tracking System - Final Diploma Project</p>
 </div>
 
 
 
-## **🌐 From Projects to Profession — *Silicon Labs Internship (2025)***
+<h2 id="from-projects-to-profession--silicon-labs-internship">🌐 From Projects to Profession — *Silicon Labs Internship (2025)</h2>
 
-As I moved on to B.Tech (2021–2024) and now my M.Tech at IIT Jammu (2024–2026), I kept building. I explored encryption, networking, wireless protocols, and system-level programming. And then came the moment that validated it all—I landed an internship at Silicon Labs.
+<blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-6">
+  “Do the work, and the opportunities will follow.”
+</blockquote>
 
-Silicon Labs is one of the global leaders in embedded Wi-Fi, Bluetooth, Zigbee, and IoT SDKs. I had spent time reading about their work and was genuinely fascinated by the kind of wireless systems they built. When I got the offer to join them as a Wi-Fi Embedded Programmer, it felt like the pieces of my journey had come together—from blinking LEDs to building full wireless systems.
 
-<div className="my-4 rounded-md overflow-hidden shadow">
+Every project I had built until now—whether it was blinking LEDs, an autonomous robot, or a GPS-enabled tracking device—was driven by passion. But I always wondered: could I turn this passion into something professional? Could I find a space where people built systems like these for a living? That question lingered as I transitioned into my B.Tech and then into M.Tech at IIT Jammu. By then, my interest had matured into a focused domain: **embedded systems and wireless communication**. I became fascinated by low-level software that interacts with hardware, by protocols like UART, I²C, and SPI, and by real-world technologies that power IoT ecosystems.
+
+
+That’s when I discovered **Silicon Labs**, a global leader in Wi-Fi, Bluetooth, Zigbee, and wireless SoC development. Their SDKs and development kits are used across industries for secure, energy-efficient embedded systems. The more I read, the more I felt: this is where I belong. They weren’t just building devices—they were building the infrastructure that tomorrow’s connected world will run on.
+
+So, I applied with the best of what I had: my projects, my hands-on experience, my code, and most importantly, my story. I wasn’t coming from a traditional computer science background, but I had depth, curiosity, and proof of work. When I received the offer for a **Wi-Fi SDK Intern**, it was a surreal full-circle moment. From writing code in a dusty room on a slow laptop to contributing to embedded wireless development at an industry leader—this wasn’t just a milestone, it was validation. My journey through embedded systems wasn’t just personal anymore. It had become professional.
+
+
+<div className="my-4 rounded-md overflow-hidden shadow w-[90%] mx-auto">
   <img src="/images/love-with-embedded-systems/6.jpg" alt="Silicon Labs Internship" />
   <p className="text-sm text-center text-gray-500 italic mt-2">Silicon Labs Internship</p>
 </div>
 
 
 
-# **❤️ Why Embedded Still Feels Like Magic**
+<h2 id="why-embedded-still-feels-like-magic">❤️ Why Embedded Still Feels Like Magic</h2>
 
-Even now, I find embedded systems endlessly fascinating. It’s a world where every bug is a puzzle, every crash has a cause, and every success feels earned. You deal with real hardware. You write low-level code that talks directly to silicon. You flash firmware and watch the world respond.
+Even after years of working on projects, writing thousands of lines of C code, debugging stubborn UART failures, and watching modules fail silently for no apparent reason—embedded systems still feel magical to me. There’s something inherently satisfying about writing low-level code and seeing it manifest in physical action. Whether it’s a blinking LED, a signal on an oscilloscope, a live GPS coordinate, or a packet transmitted over Wi-Fi, the cause-effect loop in embedded development is raw, real, and intensely rewarding. There’s no room for illusions. If it works, it works because you earned it.
 
-It’s not glamorous—but it’s real. It’s not always elegant—but it’s powerful. Embedded systems have taught me how to think, how to be precise, how to handle failure, and how to persist. And I know this is just the beginning.
+
+Embedded systems demand a different kind of thinking. You’re not just building for users—you’re building for constraints. You're writing code that often has to run in kilobytes of memory, using limited compute power, under real-time constraints, with no fancy frameworks to lean on. You need to care about debounce timings, power consumption, startup delays, and pin states. Every single part matters. That precision, that requirement to understand the system as a whole, makes embedded feel less like software development and more like engineering in its purest form.
+
+What keeps me hooked is that embedded systems blur the lines between the abstract and the tangible. Your code doesn’t just live inside a compiler—it moves wheels, sends messages through the air, and interacts with the physical world in real-time. You’re not just programming a device—you’re programming behavior. You’re building tiny systems that do big things. And even now, every time I flash new firmware and see the board come alive, I feel the same awe I felt with that first blinking LED. That feeling has never left—and I hope it never does.
+
+[1]: https://github.com/rohitkrtiwari/ELECTROZON-Ecommerce-website-/
+[2]: https://github.com/rohitkrtiwari/real-time-vehicle-tracking-system/
