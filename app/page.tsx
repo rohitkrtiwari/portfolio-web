@@ -14,7 +14,7 @@ export default function Page() {
           {/* Passport photo with modern framing */}
           <div className="w-32 h-32 md:w-40 md:h-40 mb-6 rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-lg ring-2 ring-blue-500/30">
             <img
-              src="/images/photo.png"  // Replace with your image path
+              src="/images/photo 3.jpeg"  // Replace with your image path
               alt="Rohit Tiwari"
               className="w-full h-full object-cover"
             />
