@@ -1,0 +1,114 @@
+---
+title: "From Diploma to IIT: My Unconventional CS Journey"
+subtitle: "How Hardware Hacking Became My Competitive Edge"
+summary: "The story of how hands-on hardware projects—not just textbooks—shaped my path to IIT Jammu's M.Tech program"
+tags: ["career", "embedded-systems", "education"]
+publishedAt: "2025-05-22"
+---
+
+# The 3 AM Breakthrough
+
+The acrid smell of burnt PCB filled my dorm room as I frantically probed my SIM900A module with a multimeter. It was 3 AM on a Tuesday, and my vehicle tracking prototype—a jumble of GPS modules, ESP32 boards, and jumper wires—had just fried its third voltage regulator.
+
+
+Little did I know, these struggles with hardware would become my secret weapon. Three years later, that same tenacity landed me at **IIT Jammu’s M.Tech program**—not through traditional routes, but by proving that **real-world problem-solving trumps rote learning**.
+
+## Diploma Days: Learning from the Ground Up
+
+### The Electrozon Epiphany
+
+My first "aha" moment came while building [Electrozon](https://github.com/yourusername/electrozon), an e-commerce site with PHP/MySQL:
+
+```php
+// The bug that taught me memory management
+function calculateCart() {
+  $total = 0;
+  foreach ($_SESSION['cart'] as $item) {
+    if (!isset($item['price'])) continue; // Hard-earned fix
+    $total += $item['price']; 
+  }
+  return $total;
+}
+```
+
+After **72 Hours of debugging** a $0 cart total,I realzed\: 
+* **Software Problems mirror hardware issues** (both need systematic debugging)
+* **Full stack is just layered abstraction** (like PCB schematics)
+
+## Hardware as a Teacher
+
+While classmates memorized theorems, I leaned:
+
+
+| Hardware Challenge          | Software Lesson                  |
+| --------------------------- | -------------------------------- |
+| Timing issues in UART comms | → Clock cycles in algorithms     |
+| Debugging GSM AT commands   | → Protocol design principles     |
+| Power optimization for IoT  | → Resource management in systems |
+
+![](electrozon/image.png)
+
+## The Turning Point: Projects That Opened Doors
+
+### The Vehicle Tracker
+
+My **real-time tracking system** (SIM900A + ESP32) taught me:
+
+1. **The cost of assumptions**:
+   * "GPRS always works" → Field testing revealed 30% packet loss in urban areas
+2. **Hardware/software co-design**:
+
+```txt
+// Sleep mode optimization
+void deepSleep() {
+  esp_sleep_enable_timer_wakeup(300 * 1000000); // 5 mins
+  esp_deep_sleep_start(); // Cut power to 0.8mA
+}
+```
+
+
+
+### ISRO Satellite Tracker
+
+Building [ISSAT](https://github.com/yourusername/issat) forced me to:
+
+* **Reverse-engineer** ISRO’s API endpoints
+* **Visualize orbits** using Three.js
+* **Balance accuracy vs. performance** in MySQL queries
+
+## Why IIT Jammu Took a Chance on Me
+
+During my interview, the panel asked:
+
+> "How would you debug a race condition in a multithreaded embedded system?"
+
+My answer drew from **real failures**:
+
+1. When my GPS tracker crashed under Mumbai’s urban canyon effect
+2. How I fixed it with a watchdog timer
+3. The lesson: Concurrency isn’t theory—it’s "100 vehicles pinging your server at once"
+
+
+## Lessons for Unconventional Engineers
+
+### 1. Skills > Degrees (But Degrees Open Doors)
+
+* My PHP freelancing funded hardware projects
+* IITs network gave me access to high-performance compute clusters
+
+### 2. Embrace the Grind
+
+
+### 3. Find Your Hybrid Niche
+
+The tech world needs engineers who:
+
+* **Write Python for ML** but understand memory allocation
+* **Design React UIs** while knowing HTTP overhead
+
+## Where I'm Headed Next
+
+Today, when I train ML models at IIT, I keep an **Arduino** on my desk—a reminder that innovation lives where domains intersect. My next goal? *Building energy-efficient edge AI for agricultural IoT*.
+
+To fellow unconventional learners: **Your struggles are your edge**. That 3 AM hardware failure? It’s just the first draft of your success story.
+
