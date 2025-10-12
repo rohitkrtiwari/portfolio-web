@@ -79,8 +79,12 @@ html {
 }
 
 .prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
+  max-width: 100%;   /* Responsive: image won't overflow container */
+  height: auto;      /* Maintain aspect ratio */
+  /* width: 600px;      Set a default width, adjust as needed */
+  max-height: 400px;
+  display: block;    /* Optional: removes inline gap */
+  /* margin: 2rem auto; Optional: centers image with vertical spacing */
 }
 
 .prose p {
@@ -180,6 +184,7 @@ table {
 /* Prose Enhancements */
 .prose {
   max-width: 100%;
+  font-size: 1.2rem;
 }
 
 .prose p {
