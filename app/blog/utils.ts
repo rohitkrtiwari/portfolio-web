@@ -4,8 +4,29 @@ import path from 'path'
 type Metadata = {
   title: string
   publishedAt: string
-  summary: string
+  summary?: string
+  thesis?: string
+  category?: string
+  section?: string
   image?: string
+  updatedAt?: string
+  order?: number
+  draft?: boolean
+  readingTime: string
+}
+
+export function calculateReadingTime(content: string) {
+  const plainText = content
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/[#>*_`[\]()!-]/g, ' ')
+
+  const wordCount = plainText
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length
+
+  return `${Math.max(1, Math.ceil(wordCount / 220))} min read`
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -14,16 +35,30 @@ function parseFrontmatter(fileContent: string) {
   let frontMatterBlock = match![1]
   let content = fileContent.replace(frontmatterRegex, '').trim()
   let frontMatterLines = frontMatterBlock.trim().split('\n')
-  let metadata: Partial<Metadata> = {}
+  let frontmatter: Record<string, string> = {}
 
   frontMatterLines.forEach((line) => {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
     value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value
+    frontmatter[key.trim()] = value
   })
 
-  return { metadata: metadata as Metadata, content }
+  const metadata: Metadata = {
+    title: frontmatter.title ?? '',
+    summary: frontmatter.summary,
+    thesis: frontmatter.thesis,
+    category: frontmatter.category,
+    section: frontmatter.section,
+    image: frontmatter.image,
+    updatedAt: frontmatter.updatedAt,
+    publishedAt: frontmatter.publishedAt ?? frontmatter.date ?? '',
+    order: frontmatter.order != null ? Number(frontmatter.order) : undefined,
+    draft: frontmatter.draft === 'true',
+    readingTime: calculateReadingTime(content),
+  }
+
+  return { metadata, content }
 }
 
 function getMDXFiles(dir) {
@@ -55,10 +90,15 @@ export function getBlogPosts() {
 
 export function formatDate(date: string, includeRelative = false) {
   let currentDate = new Date()
+  const rawDate = date
   if (!date.includes('T')) {
     date = `${date}T00:00:00`
   }
   let targetDate = new Date(date)
+
+  if (Number.isNaN(targetDate.getTime())) {
+    return rawDate
+  }
 
   let yearsAgo = currentDate.getFullYear() - targetDate.getFullYear()
   let monthsAgo = currentDate.getMonth() - targetDate.getMonth()

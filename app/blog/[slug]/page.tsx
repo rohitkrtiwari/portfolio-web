@@ -20,9 +20,11 @@ export function generateMetadata({ params }) {
   let {
     title,
     publishedAt: publishedTime,
-    summary: description,
+    summary,
+    thesis,
     image,
   } = post.metadata
+  let description = summary ?? thesis
   let ogImage = image
     ? image
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`
@@ -70,7 +72,7 @@ export default function Blog({ params }) {
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
+            description: post.metadata.summary ?? post.metadata.thesis,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
@@ -88,6 +90,8 @@ export default function Blog({ params }) {
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
+          <span aria-hidden="true"> · </span>
+          {post.metadata.readingTime}
         </p>
       </div>
       <article className="prose">
