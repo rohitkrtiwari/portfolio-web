@@ -168,10 +168,6 @@ export default function BlogPage() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <header className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400">
-          Notes and essays
-        </p>
-
         <h1 className="mt-3 text-4xl font-bold tracking-tight text-neutral-950 dark:text-white sm:text-5xl">
           Writing
         </h1>
